@@ -1,0 +1,179 @@
+.admin-login {
+  height: 100vh;
+  width: 100%;
+  background-color: #2d3a4b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  input {
+    width: 450px;
+    color: white !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    &::placeholder {
+      color: #889aa4;
+    }
+  }
+  button {
+    width: 450px;
+  }
+}
+
+.admin {
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 100%;
+    transition: 0.2s;
+    background-color: #304156;
+    .list-item {
+      display: flex;
+      align-items: center;
+      color: rgb(191, 203, 217);
+      height: 56px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: #263445;
+      }
+      &.active {
+        color: rgb(64, 158, 255);
+      }
+    }
+    .icon {
+      width: 56px;
+      text-align: center;
+      font-size: 20px;
+    }
+    &.shrinked {
+      width: 56px;
+      .text {
+        display: none;
+      }
+    }
+  }
+
+  .main {
+    width: calc(100% - 210px);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 210px;
+    transition: 0.2s;
+    > .card {
+      border-bottom: none;
+      border-right: none;
+    }
+
+    .main-header {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      box-shadow: 0 1px 4px rgb(0 21 41 / 8%);
+      i {
+        width: 56px;
+        height: 56px;
+        text-align: center;
+        line-height: 56px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          background-color: #f9f9f9;
+        }
+      }
+      .text {
+        color: #97a8be;
+      }
+    }
+
+    .add-blog {
+      label {
+        color: #606266;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .photo {
+        .form-file-text {
+          color: #6c757d;
+          font-weight: normal;
+        }
+        .is-invalid .custom-file-label {
+          border-color: #dc3545;
+        }
+      }
+    }
+
+    .add-employee {
+      label {
+        color: #606266;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .date {
+        .form-control {
+          color: black;
+          font-weight: normal;
+        }
+      }
+      .photo {
+        .form-file-text {
+          color: black;
+          font-weight: normal;
+        }
+        .is-invalid .custom-file-label {
+          border-color: #dc3545;
+        }
+      }
+    }
+
+    .add-vacancy {
+      label {
+        color: #606266;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .location,
+      .type,
+      .description,
+      .switch {
+        .form-row {
+          align-items: center;
+          legend {
+            font-size: 16px;
+            font-weight: bold;
+            color: #606266;
+          }
+          label {
+            color: black;
+            font-weight: normal;
+          }
+        }
+      }
+      .description {
+        .form-row {
+          align-items: flex-start;
+        }
+      }
+      .switch {
+        .form-row {
+          align-items: center;
+        }
+      }
+    }
+
+    &.enlarged {
+      width: calc(100% - 56px);
+      left: 56px;
+    }
+  }
+}

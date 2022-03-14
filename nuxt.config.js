@@ -20,7 +20,11 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/editor.js', mode: 'client' },
+    '~/plugins/vuelidate.js',
+    '~/plugins/axios.js',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -31,6 +35,7 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/moment',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,11 +44,50 @@ export default {
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
+    '@nuxtjs/i18n',
+    '@nuxtjs/dotenv',
   ],
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL,
+  },
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'Eng',
+        iso: 'en-US',
+        file: 'en.json',
+      },
+      {
+        code: 'ru',
+        name: 'Rus',
+        iso: 'ru-RU',
+        file: 'ru.json',
+      },
+      {
+        code: 'uz',
+        name: 'Uzb',
+        iso: 'uz-UZ',
+        file: 'uz.json',
+      },
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+    },
+    lazy: true,
+    langDir: 'i18n/',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: false,
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  server: {
+    host: '0.0.0.0',
+  },
 }

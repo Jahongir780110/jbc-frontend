@@ -1,0 +1,90 @@
+.about {
+  .head {
+    .title {
+      h1 {
+        @media (max-width: 420px) {
+          font-size: 1.8em;
+        }
+      }
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 600px;
+    background-image: url('~/static/images/bike-2.png');
+    background-size: cover;
+    background-position: center;
+    @media (max-width: 650px) {
+      height: 400px;
+    }
+  }
+
+  .about-card {
+    border: 1px solid silver;
+    position: relative;
+    top: -100px;
+    background-color: white;
+    border-radius: 3px;
+    @media (max-width: 576px) {
+      top: -180px;
+    }
+    .text {
+      width: 75%;
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .stats {
+    margin-top: -50px;
+    @media (max-width: 576px) {
+      margin-top: -150px;
+    }
+    .row {
+      width: 75%;
+      @media (max-width: 532px) {
+        width: 100%;
+      }
+      h2 {
+        @media (max-width: 450px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .images {
+    .img-2,
+    .img-3 {
+      height: 47%;
+    }
+    .img-4 {
+      height: 55%;
+    }
+    .img-5 {
+      height: 40%;
+    }
+    img {
+      width: 100%;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+    button {
+      min-width: 180px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      background-color: #2e3a59;
+      border: none;
+      outline: none;
+      color: white;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

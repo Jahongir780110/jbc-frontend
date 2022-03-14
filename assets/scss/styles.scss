@@ -1,3 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @import './header.scss';
 @import './footer.scss';
 @import './projects.scss';
+@import './team.scss';
+@import './careers.scss';
+@import './blog.scss';
+@import './about.scss';
+@import './contact.scss';
+@import './admin.scss';
+
+body {
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-to {
+  opacity: 0;
+}
+
+.landing-page {
+  .intro {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url('~/static/images/team.png');
+    background-size: cover;
+    background-position: center;
+    h2 {
+      width: 50%;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+      @media (max-width: 880px) {
+        width: 80%;
+      }
+    }
+  }
+
+  .info {
+    &-card {
+      background-color: #f4f4f4;
+      position: relative;
+      top: -50px;
+      border-radius: 5px;
+      .top {
+        .title {
+          font-weight: 800;
+          font-size: 2.5rem;
+          @media (max-width: 460px) {
+            font-size: 1.8rem;
+          }
+          .blue {
+            color: #207ef0;
+          }
+          .grey {
+            color: #b3b7ba;
+          }
+        }
+      }
+      .bottom {
+        .exclamation {
+          width: 80px;
+          height: 80px;
+          background-color: #2e3a59;
+          border-radius: 50%;
+          font-size: 3rem;
+        }
+      }
+    }
+    &-main {
+      .left {
+        .title {
+          font-weight: 800;
+          font-size: 3rem;
+          @media (max-width: 1000px) {
+            font-size: 2rem;
+          }
+        }
+        .para {
+          width: 75%;
+          @media (max-width: 1000px) {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  .opinion-short {
+    background-color: #f4f4f4;
+    .right {
+      .opinion-title {
+        font-weight: 800;
+        font-size: 3rem;
+        @media (max-width: 991px) {
+          font-size: 2.2rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.8rem;
+        }
+      }
+      .para {
+        width: 75%;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .blogs-short {
+    .blogs-title {
+      font-weight: 800;
+      font-size: 2.2rem;
+    }
+  }
+
+  .about-short {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    .about-title {
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .carousel {
+      .carousel-indicators {
+        bottom: -40px;
+        li {
+          background-color: #777;
+        }
+      }
+    }
+    .images {
+      .image {
+        image {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+        }
+      }
+    }
+    .about-card {
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      padding: 20px 20px 42px;
+      border-radius: 5px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .services-short {
+    padding: 56px 0;
+    .left {
+      .title {
+        font-size: 36px;
+        font-weight: 800;
+      }
+      .button {
+        min-width: 180px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: #2e3a59;
+        border: none;
+        outline: none;
+        color: white;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+    .right {
+      .service-card {
+        border: 1px solid #cacaca;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+        width: 80%;
+        @media (max-width: 530px) {
+          width: 100%;
+        }
+        .number {
+          font-size: 80px;
+          color: #2e3a59;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+.error {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f4;
+}

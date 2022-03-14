@@ -1,7 +1,5 @@
 <template>
   <div class="wrapper">
-    <the-header></the-header>
     <Nuxt />
-    <the-footer></the-footer>
   </div>
 </template>
