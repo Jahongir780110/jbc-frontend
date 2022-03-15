@@ -19,18 +19,18 @@
             class="ml-2"
             >{{ $t(item) }}</b-nav-item
           >
-
-          <span class="ml-5 languages">
-            <b-dropdown variant="link" toggle-class="text-decoration-none">
-              <template #button-content>
-                <span>{{ $i18n.localeProperties.name }}</span>
-              </template>
-              <b-dropdown-item @click="changeLang('en')">Eng</b-dropdown-item>
-              <b-dropdown-item @click="changeLang('ru')">Rus</b-dropdown-item>
-              <b-dropdown-item @click="changeLang('uz')">Uzb</b-dropdown-item>
-            </b-dropdown>
-          </span>
         </b-navbar-nav>
+
+        <span class="ml-md-5 ml-auto languages">
+          <b-dropdown variant="link" toggle-class="text-decoration-none">
+            <template #button-content>
+              <span>{{ $i18n.localeProperties.name }}</span>
+            </template>
+            <b-dropdown-item @click="changeLang('en')">Eng</b-dropdown-item>
+            <b-dropdown-item @click="changeLang('ru')">Rus</b-dropdown-item>
+            <b-dropdown-item @click="changeLang('uz')">Uzb</b-dropdown-item>
+          </b-dropdown>
+        </span>
 
         <span v-b-toggle.sidebar class="menu-button d-md-none d-inline-block">
           <i v-if="!alternative" class="mdi mdi-menu text-white"></i>

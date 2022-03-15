@@ -5,16 +5,19 @@
         <h1 class="font-weight-bold text-center title">
           Do you want to work with us?
         </h1>
+
         <p class="mt-4 text-center para mx-auto">
           True Cloud Web Hosting All of the hosting packages we offer are
           deployed instantly on our SSD powered cloud.
         </p>
+
         <div class="row vacancy-group mt-5 mx-sm-0 mx-2">
           <the-job v-for="vac in vacancies" :key="vac.id" :data="vac"></the-job>
           <p v-if="vacancies.length === 0" class="text-secondary">
             No vacancies found.
           </p>
         </div>
+
         <button
           v-if="getVacancies.length > 4 && vacancies.length === 4"
           class="mt-4 mx-auto"

@@ -11,27 +11,7 @@
 
     <div class="slider">
       <b-carousel :interval="4000" indicators>
-        <b-carousel-slide>
-          <template #img>
-            <div class="slide-text mx-auto text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Perferendis dolorem aliquid, suscipit sed vitae exercitationem
-              ullam ipsa omnis. Facilis doloremque sed veniam, et corrupti quia
-              velit harum quod est nulla?
-            </div></template
-          >
-        </b-carousel-slide>
-        <b-carousel-slide>
-          <template #img>
-            <div class="slide-text mx-auto text-center">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Perferendis dolorem aliquid, suscipit sed vitae exercitationem
-              ullam ipsa omnis. Facilis doloremque sed veniam, et corrupti quia
-              velit harum quod est nulla?
-            </div></template
-          >
-        </b-carousel-slide>
-        <b-carousel-slide>
+        <b-carousel-slide v-for="num in 3" :key="num">
           <template #img>
             <div class="slide-text mx-auto text-center">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -47,10 +27,12 @@
     <div class="staff mt-4">
       <div class="container">
         <h1 class="title">Our great team</h1>
+
         <div class="row people">
           <p v-if="employees.length === 0" class="text-secondary px-3">
             No data found.
           </p>
+
           <div
             v-for="emp in employees.slice(0, limit)"
             :key="emp.id"
@@ -61,10 +43,13 @@
                 :src="emp.imgUrl"
                 :alt="emp.firstName + ' ' + emp.lastName"
               />
+
               <h4 class="mt-3 px-3 font-weight-bold mb-1">
                 {{ emp.firstName }} {{ emp.lastName }}
               </h4>
+
               <p class="position mb-1 px-3">{{ emp.position }}</p>
+
               <p class="text-secondary mb-3 px-3 small">
                 <span class="d-inline-block">From: {{ emp.from }}</span>
                 <span class="d-inline-block ml-3">To: {{ emp.to }}</span>
@@ -72,6 +57,7 @@
             </b-card>
           </div>
         </div>
+
         <div class="row mt-4 justify-content-center">
           <button
             v-if="employees.length > 6 && limit === 6"

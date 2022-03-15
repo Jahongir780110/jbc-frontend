@@ -13,6 +13,9 @@
       </div>
 
       <div class="row blogs-group mt-4">
+        <p v-if="blogs.slice(0, limit).length === 0" class="text-secondary">
+          No blogs found
+        </p>
         <div
           v-for="blog in blogs.slice(0, limit)"
           :key="blog.id"
@@ -23,6 +26,7 @@
               <img :src="blog.img" :alt="blog.title" class="h-100" />
             </nuxt-link>
           </div>
+
           <div class="col-xl-8 col-lg-6 col-12 info px-3 pt-3">
             <div
               class="w-100 d-sm-flex align-items-center justify-content-between"
@@ -60,14 +64,6 @@
           See less
         </button>
       </div>
-
-      <!-- <div class="mt-3 blog-pagination">
-        <b-pagination
-          v-model="currentPage"
-          pills
-          :total-rows="rows"
-        ></b-pagination>
-      </div> -->
     </div>
   </div>
 </template>

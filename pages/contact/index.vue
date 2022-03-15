@@ -112,12 +112,6 @@
             </b-form-group>
           </div>
 
-          <!-- <div class="col-12">
-            <b-form-checkbox v-model="form.isAgree">
-              I agree to the <nuxt-link to="/">Terms & Conditions</nuxt-link>
-            </b-form-checkbox>
-          </div> -->
-
           <div class="col-12 mt-3">
             <button class="contact-button" @click="send">Send message</button>
           </div>

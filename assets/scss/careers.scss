@@ -1,5 +1,28 @@
-.job {
-  background-color: #f4f4f4;
+// stylelint-disable no-descending-specificity
+@mixin opinion {
+  .opinion-short {
+    background-color: #fff;
+    .right {
+      .opinion-title {
+        font-weight: 800;
+        font-size: 3rem;
+        @media (max-width: 991px) {
+          font-size: 2.2rem;
+        }
+        @media (max-width: 768px) {
+          font-size: 1.8rem;
+        }
+      }
+      .text {
+        width: 75%;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@mixin job-card {
   .job-card {
     .card-body {
       display: flex;
@@ -19,6 +42,21 @@
           border-radius: 50%;
           margin-bottom: 2px;
           background-color: #ef476f;
+        }
+        .desc {
+          max-height: 160px;
+          overflow-y: hidden;
+          p {
+            margin-bottom: 0 !important;
+          }
+        }
+        .more {
+          color: #06d6a0;
+          cursor: pointer;
+          display: inline-block;
+          &:hover {
+            text-decoration: underline;
+          }
         }
         .wage {
           font-weight: 700;
@@ -43,22 +81,46 @@
       }
     }
   }
+}
+
+.careers {
+  .vacancies {
+    background-color: #f4f4f4;
+    .para {
+      width: 50%;
+      @media (max-width: 100px) {
+        width: 75%;
+      }
+      @media (max-width: 760px) {
+        width: 100%;
+      }
+    }
+    .vacancy-group {
+      @include job-card;
+    }
+    button {
+      min-width: 180px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      background-color: #2e3a59;
+      border: none;
+      outline: none;
+      color: white;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+  @include opinion;
+}
+
+.job {
+  background-color: #f4f4f4;
+  @include job-card;
   .form {
-    label {
-      color: #606266;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .file {
-      .form-file-text {
-        color: black;
-        font-weight: normal;
-      }
-      .is-invalid label {
-        border-color: #dc3545;
-      }
-    }
     .wrapper {
       border: 1px solid rgba(0, 0, 0, 0.125);
       border-radius: 0.25rem;
@@ -73,6 +135,23 @@
         width: 50%;
         @media (max-width: 800px) {
           width: 90%;
+        }
+      }
+      .fields {
+        label {
+          color: #606266;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .file {
+          .form-file-text {
+            color: black;
+            font-weight: normal;
+          }
+          .is-invalid label {
+            border-color: #dc3545;
+          }
         }
       }
       .form-button {
@@ -99,136 +178,5 @@
       }
     }
   }
-  .opinion-short {
-    background-color: #fff;
-    .right {
-      .opinion-title {
-        font-weight: 800;
-        font-size: 3rem;
-        @media (max-width: 991px) {
-          font-size: 2.2rem;
-        }
-        @media (max-width: 768px) {
-          font-size: 1.8rem;
-        }
-      }
-      .opinion-para {
-        width: 75%;
-        @media (max-width: 991px) {
-          width: 100%;
-        }
-      }
-    }
-  }
-}
-
-.careers {
-  .vacancies {
-    background-color: #f4f4f4;
-    .para {
-      width: 50%;
-      @media (max-width: 100px) {
-        width: 75%;
-      }
-      @media (max-width: 760px) {
-        width: 100%;
-      }
-    }
-    .vacancy-group {
-      .job-card {
-        .card-body {
-          display: flex;
-          a {
-            color: inherit !important;
-          }
-          .info {
-            .title h2 {
-              @media (max-width: 430px) {
-                font-size: 1.6rem;
-              }
-            }
-            .dot {
-              display: inline-block;
-              width: 6px;
-              height: 6px;
-              border-radius: 50%;
-              margin-bottom: 2px;
-              background-color: #ef476f;
-            }
-            .desc {
-              max-height: 160px;
-              overflow-y: hidden;
-              p {
-                margin-bottom: 0 !important;
-              }
-            }
-            .more {
-              color: #06d6a0;
-              cursor: pointer;
-              display: inline-block;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-            .wage {
-              font-weight: 700;
-              color: #06d6a0;
-            }
-            .skills {
-              .job-badge {
-                display: inline-flex;
-                align-items: center;
-                height: 25px;
-                font-weight: 500;
-                margin-right: 5px;
-                padding: 0 10px;
-                color: #073b4c;
-                background-color: #f2f2f2;
-                border-radius: 12px;
-                font-size: 14px;
-                line-height: 1;
-                cursor: pointer;
-              }
-            }
-          }
-        }
-      }
-    }
-    button {
-      min-width: 180px;
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 5px;
-      background-color: #2e3a59;
-      border: none;
-      outline: none;
-      color: white;
-      &:hover {
-        opacity: 0.9;
-      }
-    }
-  }
-  .opinion-short {
-    background-color: #fff;
-    .right {
-      .opinion-title {
-        font-weight: 800;
-        font-size: 3rem;
-        @media (max-width: 991px) {
-          font-size: 2.2rem;
-        }
-        @media (max-width: 768px) {
-          font-size: 1.8rem;
-        }
-      }
-      .text {
-        width: 75%;
-        @media (max-width: 991px) {
-          width: 100%;
-        }
-      }
-    }
-  }
+  @include opinion;
 }

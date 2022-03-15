@@ -42,26 +42,26 @@
         border-bottom: 3px solid white;
       }
     }
-    .languages {
-      .dropdown {
-        &-menu {
-          min-width: 0 !important;
-          width: 100%;
-          padding: 0;
-          overflow: hidden;
-          a {
-            color: inherit !important;
-            padding: 0.25rem 0;
-            text-align: center;
-            &:active {
-              background-color: #e9ecef;
-            }
+  }
+  .languages {
+    .dropdown {
+      &-menu {
+        min-width: 0 !important;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        a {
+          color: inherit !important;
+          padding: 0.25rem 0;
+          text-align: center;
+          &:active {
+            background-color: #e9ecef;
           }
         }
-        &-toggle {
-          color: white;
-          box-shadow: none !important;
-        }
+      }
+      &-toggle {
+        color: white;
+        box-shadow: none !important;
       }
     }
   }
@@ -138,6 +138,11 @@
             color: black;
           }
         }
+      }
+    }
+    .languages {
+      .dropdown-toggle {
+        color: black !important;
       }
     }
   }

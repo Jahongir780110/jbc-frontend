@@ -194,6 +194,7 @@ export const actions = {
   async apiPostAvatar(context, fd) {
     try {
       const result = await this.$axios.$post('/upload/avatar', fd)
+      console.log('result', result)
       return result
     } catch (e) {
       return { error: e.response.data.message }

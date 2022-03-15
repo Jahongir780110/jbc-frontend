@@ -15,6 +15,7 @@
           <h2 class="font-weight-bold text-center form-title">
             Send your data
           </h2>
+
           <div class="text text-center mt-3 mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
             laborum praesentium explicabo tempora impedit? Eos.
@@ -135,6 +136,7 @@
               </b-form-group>
             </div>
           </div>
+
           <button
             class="form-button mt-4 mx-auto"
             :class="{ disabled: isLoading }"

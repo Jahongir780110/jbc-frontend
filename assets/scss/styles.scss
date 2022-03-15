@@ -144,23 +144,23 @@ body {
           background-color: #777;
         }
       }
-    }
-    .images {
-      .image {
-        image {
-          width: 80px;
-          height: 80px;
-          border-radius: 50%;
+      .images {
+        .image {
+          image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
         }
       }
-    }
-    .about-card {
-      width: 100%;
-      background-color: white;
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      padding: 20px 20px 42px;
-      border-radius: 5px;
-      margin-bottom: 24px;
+      .about-card {
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        padding: 20px 20px 42px;
+        border-radius: 5px;
+        margin-bottom: 24px;
+      }
     }
   }
 
