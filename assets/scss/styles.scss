@@ -12,6 +12,9 @@
 
 body {
   font-family: Roboto, Helvetica, sans-serif;
+  a {
+    color: #457b9d;
+  }
 }
 
 .page-enter-active,
@@ -65,10 +68,10 @@ body {
             font-size: 1.8rem;
           }
           .blue {
-            color: #207ef0;
+            color: #457b9d;
           }
           .grey {
-            color: #b3b7ba;
+            color: #a8dadc;
           }
         }
       }
@@ -76,7 +79,7 @@ body {
         .exclamation {
           width: 80px;
           height: 80px;
-          background-color: #2e3a59;
+          background-color: #1d3557;
           border-radius: 50%;
           font-size: 3rem;
         }
@@ -178,7 +181,7 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 5px;
-        background-color: #2e3a59;
+        background-color: #1d3557;
         border: none;
         outline: none;
         color: white;
@@ -198,7 +201,7 @@ body {
         }
         .number {
           font-size: 80px;
-          color: #2e3a59;
+          color: #1d3557;
           font-weight: 700;
         }
       }
