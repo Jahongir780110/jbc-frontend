@@ -5,6 +5,7 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
       url('~/static/images/team-working.png');
     background-size: cover;
+    background-attachment: fixed;
     .video {
       h1 {
         text-shadow: 0 0 5px rgba(0, 0, 0, 1);

@@ -35,7 +35,7 @@ export const actions = {
         commit('setToken', token)
       }
     } catch (error) {
-      console.log('error', error.response.data)
+      console.log('Error while authenticating')
     }
   },
   logout({ commit }) {

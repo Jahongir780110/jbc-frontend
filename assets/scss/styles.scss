@@ -45,6 +45,7 @@ body {
       url('~/static/images/team.png');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     h2 {
       width: 50%;
       text-shadow: 0 0 5px rgba(0, 0, 0, 1);
