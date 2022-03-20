@@ -4,6 +4,7 @@ export const state = () => ({
   vacancies: [],
   employees: [],
   blogs: [],
+  isFirstTime: true,
 })
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setBlogs(state, val) {
     state.blogs = val
+  },
+  setFirstTime(state, val) {
+    state.isFirstTime = val
   },
 }
 
@@ -225,10 +229,15 @@ export const actions = {
       return { error: e.response.data.message }
     }
   },
+
+  changeFirstTime({ commit }, val) {
+    commit('setFirstTime', val)
+  },
 }
 
 export const getters = {
   getVacancies: (state) => state.vacancies,
   getEmployees: (state) => state.employees,
   getBlogs: (state) => state.blogs,
+  getFirstTime: (state) => state.isFirstTime,
 }
