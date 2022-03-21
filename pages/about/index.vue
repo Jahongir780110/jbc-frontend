@@ -1,6 +1,6 @@
 <template>
-  <div class="about mb-4">
-    <div class="container head mt-5">
+  <div class="about">
+    <div class="container head mt-sm-5 mt-3">
       <div class="row">
         <div class="col-lg-6 col-md-5 col-12 title">
           <h1 class="font-weight-bold">Joongang Business Consulting</h1>
@@ -40,32 +40,86 @@
       </div>
     </div>
 
-    <div class="container stats">
-      <div class="row mx-auto text-center">
-        <div class="col-4 px-0">
-          <h2 class="font-weight-bold">+1.200</h2>
-          <p class="text">users</p>
-        </div>
-        <div class="col-4 px-0">
-          <h2 class="font-weight-bold">+1.200</h2>
-          <p class="text">users</p>
-        </div>
-        <div class="col-4 px-0">
-          <h2 class="font-weight-bold">+1.200</h2>
-          <p class="text">users</p>
+    <div class="container project mt-5">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="font-weight-bold">Our project</h1>
+
+          <div class="project-image mt-4">
+            <img
+              :src="require('../../static/images/cloud.png')"
+              alt="Cloud Ultrasound"
+            />
+          </div>
+
+          <div class="info mt-5">
+            <div class="row top">
+              <div class="col-md-4 col-12 left">
+                <h2 class="font-weight-bold">About</h2>
+              </div>
+
+              <div class="col-md-8 col-12 right">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo,
+                  vero! Omnis voluptate modi ducimus quibusdam rem. Quaerat
+                  libero molestias recusandae enim suscipit asperiores
+                  consequuntur, ut quibusdam. Harum, ad eaque nostrum nulla iure
+                  omnis, nesciunt tempora, saepe reprehenderit ex autem odit.
+                </p>
+
+                <div class="stats row mt-sm-5 mt-3">
+                  <div class="col-4">
+                    <h2 class="font-weight-bold text-center">+1.200</h2>
+                    <div class="text-center">users</div>
+                  </div>
+                  <div class="col-4">
+                    <h2 class="font-weight-bold text-center">+1.200</h2>
+                    <div class="text-center">users</div>
+                  </div>
+                  <div class="col-4">
+                    <h2 class="font-weight-bold text-center">+1.200</h2>
+                    <div class="text-center">users</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row bottom align-items-center mt-5">
+              <div class="col-sm-7 col-12">
+                <h2 class="font-weight-bold">About</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Reprehenderit rerum, hic voluptas magni cum dignissimos
+                  praesentium, deserunt perferendis quam reiciendis ratione.
+                  Laborum suscipit tempora assumenda illum blanditiis natus
+                  cupiditate nobis obcaecati eum omnis voluptatibus molestias
+                  veniam voluptas, porro eos maxime cum, minus iure. Labore
+                  dignissimos perspiciatis expedita autem dolores enim!
+                </p>
+              </div>
+
+              <div
+                class="col-sm-5 border-left px-sm-4 col-12 d-sm-block d-flex"
+              >
+                <div>
+                  <h3 class="font-weight-bold">About</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Obcaecati nobis sed iure incidunt quos culpa enim inventore
+                    facilis eum officiis!
+                  </p>
+                </div>
+                <div class="ml-sm-0 ml-4">
+                  <h3 class="font-weight-bold mt-sm-4 mt-0">About</h3>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quis, excepturi!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="container info mt-5">
-      <h3 class="font-weight-bold">Info text title</h3>
-      <p class="text">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum porro
-        beatae quidem aliquam ullam reiciendis, eligendi eaque debitis at error
-        delectus unde minima ab voluptate dolores eos cupiditate. Recusandae,
-        ipsam perspiciatis id repudiandae veniam officiis, illo, ipsa ut odio
-        quod quibusdam soluta deleniti vel beatae quo ad qui? Repudiandae, ad.
-      </p>
     </div>
 
     <div class="container images mt-5">

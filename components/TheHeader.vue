@@ -42,12 +42,13 @@
           class="sidebar"
           right
           backdrop
+          width="250px"
           :no-header-close="true"
         >
-          <h5 class="logo mb-1">
+          <h5 class="logo mb-3">
             <nuxt-link class="logo" to="/">Logo</nuxt-link>
           </h5>
-          <p v-for="item in navItems" :key="item" class="mb-0 mt-2">
+          <p v-for="item in navItems" :key="item" class="mb-0 mt-1">
             <nuxt-link :to="'/' + item">{{ $t(item) }}</nuxt-link>
           </p>
         </b-sidebar>
@@ -68,7 +69,7 @@ export default {
   },
   data() {
     return {
-      navItems: ['projects', 'team', 'careers', 'blog', 'about', 'contact'],
+      navItems: ['team', 'careers', 'blog', 'about', 'contact'],
     }
   },
   methods: {

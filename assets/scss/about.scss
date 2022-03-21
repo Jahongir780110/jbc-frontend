@@ -1,8 +1,18 @@
+// stylelint-disable no-descending-specificity
+
 .about {
+  margin-bottom: -60px;
+  @media (max-width: 768px) {
+    margin-bottom: -90px;
+  }
+  @media (max-width: 576px) {
+    margin-bottom: -130px;
+  }
+
   .head {
     .title {
       h1 {
-        @media (max-width: 420px) {
+        @media (max-width: 570px) {
           font-size: 1.8em;
         }
       }
@@ -15,7 +25,7 @@
     background-image: url('~/static/images/bike-2.png');
     background-size: cover;
     background-position: center;
-    @media (max-width: 650px) {
+    @media (max-width: 768px) {
       height: 400px;
     }
   }
@@ -37,25 +47,75 @@
     }
   }
 
-  .stats {
-    margin-top: -50px;
-    @media (max-width: 576px) {
-      margin-top: -150px;
+  .project {
+    position: relative;
+    top: -100px;
+    @media (max-width: 768px) {
+      top: -130px;
     }
-    .row {
-      width: 75%;
-      @media (max-width: 532px) {
-        width: 100%;
+    @media (max-width: 576px) {
+      top: -180px;
+    }
+    h1 {
+      @media (max-width: 420px) {
+        font-size: 1.8em;
       }
-      h2 {
-        @media (max-width: 450px) {
-          font-size: 1.5rem;
+    }
+    h2 {
+      @media (max-width: 420px) {
+        font-size: 1.6rem;
+      }
+    }
+    .project-image {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        @media (max-width: 576px) {
+          height: 200px;
+          object-fit: cover;
+        }
+      }
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+    .info {
+      .top {
+        .right {
+          p {
+            width: 75%;
+            @media (max-width: 768px) {
+              width: 100%;
+            }
+          }
+          .stats {
+            width: 75%;
+            @media (max-width: 576px) {
+              width: 100%;
+            }
+          }
         }
       }
     }
   }
 
   .images {
+    position: relative;
+    top: -80px;
+    @media (max-width: 768px) {
+      top: -120px;
+    }
+    @media (max-width: 576px) {
+      top: -160px;
+    }
     .img-2,
     .img-3 {
       height: 47%;
